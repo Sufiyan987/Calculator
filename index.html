@@ -110,6 +110,7 @@
     <div class="display" id="display">0</div>
     <div class="buttons">
       <button class="clear" onclick="clearDisplay()">C</button>
+      <button class="clear" onclick="offDisplay()">OFF</button>
       <button onclick="appendValue('(')">(</button>
       <button onclick="appendValue(')')">)</button>
       <button class="operator" onclick="appendValue('/')">÷</button>
@@ -149,6 +150,12 @@
     function clearDisplay() {
       display.innerText = '0';
     }
+
+    function offDisplay() {
+      isOn = false
+      display.innerText = ''
+    }
+
 
     function calculate() {
       try {
